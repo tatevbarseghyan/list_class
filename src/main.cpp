@@ -17,6 +17,8 @@ int main()
     l1 = l;
     std::cout <<"print list  : ";
     std::cout << l1;
+    std::cout << "List front is : ";
+    l.front();
     l.insert(2,50);
     std::cout << "inserting  : ";
     std::cout << l;
@@ -35,6 +37,6 @@ int main()
     l.pop_back();
     std::cout << "pop_back : ";
     std::cout << l;
-
 }
+
 

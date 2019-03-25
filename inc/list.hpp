@@ -90,8 +90,6 @@ list<T>& list<T>::operator=(const list<T>& list)
         --m_size;
         tmp = current->next;
     }
-    m_first = NULL;
-    m_last = NULL;
     node<T> * new_node = list.m_first;
     while (new_node != NULL) {
         push_back(new_node->data);
@@ -214,8 +212,7 @@ T& list<T>::front()
 //    if (m_size == 0) {
   //      std::cout << "List is empty" << std::endl;
    // } else {
-   //
-    return this->m_first->data;
+    return m_first->data;
    // }
 }
 
