@@ -1,7 +1,6 @@
 #ifndef LIST_H
 #define LIST_H
 
-        // pay attention to the comments: behaviour, description of arguments and return value 
 #include <iostream>
 
 template <typename T> class list;
@@ -26,23 +25,29 @@ class list
     public:
         list();
         ~list();
-        
+
         list(const list& list);
         list<T>& operator=(const list& list);
 
+        //check if the list is empty or not
         bool is_empty();
+        //print list
         void print_list();
-
+        //this function insert element in the given position(pos)
         void insert(int pos, T item);
+        //tis function delete element from the given position(pos)
         void remove(int pos);
-
+        //this function add given value in the end of list
         void push_back(T item);
+        //this function delete last element of list
         void pop_back();
-
+        //this function return first element of list
         T& front();
+        //this function return last element of list
         T& back();
+        //this function reverse list
         void reverse();
-
+        //overload function for operator<<
         friend std::ostream& operator<< <>(std::ostream& out, const list& l);
 };
 
